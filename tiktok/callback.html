@@ -1,0 +1,8 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kayam Posts</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;background:#f6f1e7;color:#111;margin:0;padding:32px 16px;text-align:center}
+.box{max-width:480px;margin:0 auto;background:#fff;border-radius:16px;padding:24px}code{display:block;word-break:break-all;background:#111;color:#d6f45a;padding:14px;border-radius:10px;margin:16px 0;font-size:15px}
+button{background:#111;color:#d6f45a;border:0;border-radius:10px;padding:12px 20px;font-size:16px}</style></head><body><div class="box">
+<h2>Kayam Posts</h2><p id="msg">Lecture…</p><code id="code"></code><button id="b" onclick="navigator.clipboard.writeText(document.getElementById(&quot;code&quot;).textContent);this.textContent=&quot;Copié ✓&quot;">Copier</button></div>
+<script>var p=new URLSearchParams(location.search),c=p.get("code"),e=p.get("error");
+if(c){document.getElementById("msg").textContent="Connexion réussie. Copie ce code et envoie-le au bot Kayam sur Telegram (il expire vite) :";document.getElementById("code").textContent=c;}
+else{document.getElementById("msg").textContent=e?("Erreur TikTok : "+e):"Aucun code reçu.";document.getElementById("code").style.display="none";document.getElementById("b").style.display="none";}</script></body></html>
